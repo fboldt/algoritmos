@@ -7,11 +7,11 @@ double round(double number) {
 }
 
 void plot2d(double (*function)(double)) {
-  int values[SIZE+SIZE+1];
+  int values[2*SIZE+1];
   int i, b;
   double x, value;
   
-  for(i=0; i<SIZE+SIZE+1; i++) {
+  for(i=0; i<2*SIZE+1; i++) {
     x = (i - (SIZE));
     x *= STEP;
     value = function(x);
