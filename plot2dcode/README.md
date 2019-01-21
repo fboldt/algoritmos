@@ -1,3 +1,2 @@
 Código para plotar gráficos em duas dimensões no terminal.
-Exemplo:
-https://gist.github.com/fboldt/5183b56fe8222f176cf26db0fa4d768f
+Exemplo: https://gist.github.com/fboldt/a912921c656a0b9f6b49d085d621cad9
