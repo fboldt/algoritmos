@@ -5,7 +5,7 @@ double identity(double x){
 }
 
 double square(double x){
-  return x*x;
+  return x*x-3;
 }
 
 int main(){
