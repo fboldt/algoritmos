@@ -1,10 +1,20 @@
 #include <stdio.h>
 #include <math.h>
+#ifndef AXIS
 #define AXIS "+ "
+#endif
+#ifndef LINE
 #define LINE "# "
+#endif
+#ifndef GRAPH
 #define GRAPH ". "
+#endif
+#ifndef SIZE
 #define SIZE 15
-#define STEP (1.0)
+#endif
+#ifndef STEP
+#define STEP (0.2)
+#endif
 
 double round(double number) {
   return number < 0.0 ? ceil(number - 0.5) : floor(number + 0.5);
