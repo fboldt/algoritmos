@@ -1,20 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#ifndef AXIS
-#define AXIS "+ "
-#endif
-#ifndef LINE
-#define LINE "# "
-#endif
-#ifndef GRAPH
-#define GRAPH ". "
-#endif
-#ifndef SIZE
-#define SIZE 15
-#endif
-#ifndef STEP
-#define STEP (0.2)
-#endif
+#include "plot2d.h"
 
 double round(double number) {
   return number < 0.0 ? ceil(number - 0.5) : floor(number + 0.5);
@@ -26,15 +12,13 @@ int plot2d(double (*function)(double)) {
   for(int i = 0;i< SIZE+SIZE+1;++i) {
     double x = (i - (SIZE));
     x = x*STEP;
-    // EQUATION
     double value = function(x);
-    /// EQUATION
     value = value/STEP;
     values[i] = (int)(round(value));
   }
-  for(int i = 0; i < SIZE+SIZE+1;++i) {
-    printf("\n");
-  }
+//  for(int i = 0; i < SIZE+SIZE+1;++i) {
+//    printf("\n");
+//  }
   for(int i = 0;i < SIZE;++i) {
 
     for(int b = 0; b < SIZE;++b) {

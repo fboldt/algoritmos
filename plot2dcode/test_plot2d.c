@@ -1,4 +1,4 @@
-#include "plot2d.c" 
+#include "plot2d.h" 
 
 double identity(double x){
   return x;
