@@ -12,20 +12,20 @@ void plot2d(double (*function)(double), int domini, int domend) {
   for(i=domini; i<=domend; i++) {
     p = i-domini;
     values[p] = (int)(round(function(i*step)/step));
-	if (values[p] < ymin) ymin = values[p];
-	else if (values[p] > ymax) ymax = values[p];
+    if (values[p] < ymin) ymin = values[p];
+    else if (values[p] > ymax) ymax = values[p];
   }
 
   for(i=ymax+1; i>=ymin-1; i--) {
-	printf("%8.2f ",i*step);
+    printf("%8.2f ",i*step);
     for(b=domini; b<=domend; b++) {
       if(i == values[b-domini]) 
-		if(i==0) printf("O-");
-		else printf("O ");
+        if(i==0) printf("O-");
+        else printf("O ");
       else if(b == 0 && i == 0) printf("+-");
       else if(b == 0) printf("| ");
       else if(i == 0) printf("--");
-	  else printf("  ");
+      else printf("  ");
     }
     printf("\n");
   }
@@ -37,7 +37,7 @@ void plot2d(double (*function)(double), int domini, int domend) {
 }
 
 int main(){
-  plot2d(cos,-4, 6);
+  plot2d(cos,-3, 5);
   return 0;
 }
 
